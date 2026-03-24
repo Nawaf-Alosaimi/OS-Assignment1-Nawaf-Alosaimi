@@ -32,30 +32,31 @@ Document your development process as you work on the assignment. Add entries sho
 
 ## Your Development Log:
 
-### Entry 1 - [Date and Time]
-**What I did**: 
+### Entry 1 - [March 19 , 2026, 7 Am]
+**What I did**: finsh part 1,2
 
 **Details**: 
-
+- changed my user name in git hub
+- Linking my GitHub account to Vs code 
+- changed student id on line 150 to my real id {445050227}
 **Challenges**: 
-
+i had to make sure my account had linked correctly after change the user name
 **Solution**: 
-
-**Time spent**: 
-
+i loged out from my  git hub account in Vs code then i loged in 
+**Time spent**: 45 minutes
 ---
 
-### Entry 2 - [Date and Time]
+### Entry 2 - [MAR 24 and 3:44]
 **What I did**: 
-
+i added a new feature (priority)
 **Details**: 
-
+first i added a new vaiarbel int priority then i added it in class process as a private vaiarble then i add it the get method for the new vaiarble and i add it in addProcessToQueue class to show in the display
 **Challenges**: 
-
+everything was perfct
 **Solution**: 
 
 **Time spent**: 
-
+around 35 minute
 ---
 
 ### Entry 3 - [Date and Time]
