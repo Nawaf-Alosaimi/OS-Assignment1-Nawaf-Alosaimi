@@ -25,6 +25,8 @@ class Colors {
 
 // Class representing a process that implements Runnable to be run by a thread
 class Process implements Runnable {
+    private long createTime; // Timestamp when the process is created 
+    private long totalwaitingTime; // Total time the process has spent waiting in the ready queue
     private int priority; // Priority of the process (not used in Round Robin but can be extended for other scheduling algorithms)
     private String name; // Name of the process
     private int burstTime; // Total time the process requires to complete (in milliseconds)
@@ -39,6 +41,8 @@ class Process implements Runnable {
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
+        this.createTime = System.currentTimeMillis(); // Set the creation time to the current system time
+        this.totalwaitingTime = 0; // Initialize total waiting time to 0
     }
 
     // This method will be called when the thread for this process is started
@@ -126,8 +130,15 @@ class Process implements Runnable {
             System.out.println(Colors.RED + "  ✗ " + name + " was interrupted." + Colors.RESET);
         }
     }
+    public void fainalwaitingTime() {
+        totalwaitingTime = (System.currentTimeMillis() -  createTime ) - burstTime ;
+        this.totalwaitingTime = System.currentTimeMillis() -  createTime  - burstTime;
+    }
 
     // Getter methods for process name, burst time, and remaining time
+    public long getwaitingTime() {
+        return totalwaitingTime;
+    }
     public int getPriority() {
         return priority;
     }
@@ -268,14 +279,30 @@ public class SchedulerSimulation {
                     // Re-enqueue the process to give it another chance to run in the next round
                     addProcessToQueue(process, processQueue, processMap);
                 } else {
+                    process.fainalwaitingTime();
                     // If this is the last process in the queue, run it to completion
                     System.out.println(Colors.BRIGHT_YELLOW + "  ⚠ " + Colors.CYAN + process.getName() + 
                                       Colors.RESET + Colors.YELLOW + " is the last process → running to completion" + 
                                       Colors.RESET);
                     process.runToCompletion(); // Run until the process completes
+
+                   
                 }
             }
         }
+        System.out.println("\n"+"=".repeat(50)+"\n");
+        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "Process Summary:" + Colors.RESET);
+                        System.out.printf("%-15s |%-15s |%-15s\n" ,                        Colors.BOLD + "Process Name" + Colors.RESET, 
+                        Colors.BOLD + "Burst Time" + Colors.RESET, 
+                        Colors.BOLD + "Waiting Time" + Colors.RESET);
+                        System.out.println("-".repeat(50));
+                        for(Process p: processMap.values()){
+                            p.fainalwaitingTime();
+                            System.out.printf("-%15s |-%15d |-%15dms\n" , p.getName(), 
+                            p.getBurstTime(), p.getwaitingTime());
+                        }
+             
+                       System.out.println("\n"+"=".repeat(50)+"\n");
         
         System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "Total context switches: "
                            + contextSwitchCount + Colors.RESET);
@@ -291,6 +318,8 @@ public class SchedulerSimulation {
                           "╚════════════════════════════════════════════════════════════════════════════════╝" + 
                           Colors.RESET + "\n");
 
+
+        
                           
     }
     
@@ -313,5 +342,6 @@ public class SchedulerSimulation {
                           " │ Priority: " + Colors.GREEN + process.getPriority() + Colors.RESET + 
                           " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" + 
                           Colors.RESET);
-    }
-}
+                        
+            }
+        }
