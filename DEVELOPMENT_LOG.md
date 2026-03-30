@@ -46,11 +46,11 @@ i loged out from my  git hub account in Vs code then i loged in
 **Time spent**: 45 minutes
 ---
 
-### Entry 2 - [MAR 24 and 3:44]
+### Entry 2 - [MAR 24 and 3:44 PM]
 **What I did**: 
 i added a new feature (priority)
 **Details**: 
-first i added a new vaiarbel int priority then i added it in class process as a private vaiarble then i add it the get method for the new vaiarble and i add it in addProcessToQueue class to show in the display
+first i added a new vaiarbel on line 28 int priority then i added it in class process as a private vaiarble then i add it the get method on line 131 for the new vaiarble and i add it in addProcessToQueue  on line 307 class to show in the display
 **Challenges**: 
 everything was perfct
 **Solution**: 
@@ -59,30 +59,37 @@ everything was perfct
 around 35 minute
 ---
 
-### Entry 3 - [Date and Time]
+### Entry 3 - [MAR 25 and 3:42 PM]
 **What I did**: 
-
+i added a new feature (Count Context Switches)
 **Details**: 
+first i added a static counter variable for context switches
+on line  154 , i added the same variable in while (!processQueue.isEmpty()) loop
+in line 251 in the end i Display total context switches at the end of simulation
 
 **Challenges**: 
-
+at first i added the static variable inside the main class
 **Solution**: 
-
+i added the static variable above the main class
 **Time spent**: 
-
+around 20 minute
 ---
 
-### Entry 4 - [Date and Time]
+### Entry 4 - [MAR 26 and 7:25 PM]
 **What I did**: 
-
+i added a new feature Track Waiting Time 
 **Details**: 
-
+i added a tow new variable long createTime and long totalwaitingTime
+i use System.currentTimeMillis() to track time
+then i create a new method to calculate waiting time 
+in the last i create nwe table to display the waiting time by using printf 
 **Challenges**: 
-
+everything was great until i creat the table everything missed up because i forget
+to call that method i create on for loop that show the waiting time 
 **Solution**: 
-
+i call the method in the loop that display waiting time 
 **Time spent**: 
-
+3 hours
 ---
 
 ### Entry 5 - [Date and Time]

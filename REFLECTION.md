@@ -8,32 +8,38 @@ Answer the following questions about your learning experience. Each answer shoul
 ## Question 1: What did you learn about multithreading?
 
 **Your Answer:**
+"I learned that Multithreading allows a program to perform multiple tasks at the same time by breaking the program into smaller execution units called threads
+I understood the lifecycle of a thread. I saw how a process moves from New to Runnable, and then to Running.
+What Surprised Me: I was surprised by how much the Time Quantum affects everything
+at first i thought it Doesn’t matter if is it large or small but when i saw the diffrent
+between the i realize how much effict on everything
 
-[Write your answer here. Discuss specific concepts like thread creation, thread states, how threads execute concurrently, what surprised you, etc.]
 
 ---
 
 ## Question 2: What was the most challenging part of this assignment?
 
 **Your Answer:**
-
-[Describe the specific challenge. Was it understanding the code? Implementing a feature? Using Git? Explain what made it difficult and how it relates to the course concepts.]
+The most challenging part was calculating the Waiting Time accurately. At first, my program output kept showing 0ms for every process. It was difficult to understand exactly when a process 'finishes' in the scheduler loop and when to capture its end time.
 
 ---
 
 ## Question 3: How did you overcome the challenges you faced?
 
 **Your Answer:**
-
-[Describe your problem-solving approach. Did you read documentation? Ask for help? Debug systematically? What resources did you use? What strategies worked?]
+I overcame this challenge by using systematic debugging. First, I added System.out.println statements to track the creationTime and currentTime at each step. This helped me see exactly where the calculation was failing.
+I also found some people talking about this problem on Reddit that help me a lot .
 
 ---
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
 **Your Answer:**
+Modern Video Games like Fc26
+in a football match, the system must handle the AI of 22 players, the ball physics, the crowd noise, and the commentary all at once.
+ Each player on the pitch has their own AI thread to decide where to run. If the game used only one thread, the screen would freeze every time a player makes a decision. Using multiple threads allows the game to run smoothly at 60 frames per second.
 
-[Give specific examples from real applications you use (web browsers, games, mobile apps, etc.). Explain why threads are useful in those scenarios. Connect to what you learned in this assignment.]
+
 
 ---
 
