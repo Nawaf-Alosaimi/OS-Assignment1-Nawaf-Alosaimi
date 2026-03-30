@@ -1,6 +1,6 @@
 # CS3701 Operating Systems - Assignment 1: Multithreading
 ## Round-Robin CPU Scheduler Simulation
-
+the video like: https://drive.google.com/file/d/1iksON63D-vG7aAszs9-sLMJGiaMwOtLn/view?usp=drive_link
 ### 📋 Assignment Overview
 
 This assignment evaluates your ability to implement and work with multithreading in Java while introducing professional software development practices including version control (GitHub), code documentation, and project presentation. You will work with a CPU scheduling simulation that uses a **Round-Robin algorithm** with a fixed **time quantum**.
@@ -449,12 +449,12 @@ Submit a **text file** named: `YourName_StudentID_Assignment1.txt`
 
 **The file should contain:**
 ```
-Student Name: [Your Full Name]
-Student ID: [Your Student ID]
-GitHub Username: [your-github-username]
-Repository Link: https://github.com/[your-username]/OS-Assignment1-[YourName]
-Video Link: [Google Drive link - make sure it's accessible to anyone with the link]
-Date Submitted: [Submission Date]
+Student Name: [Nawaf Abdulaziz Alosaimi]
+Student ID: [445050227]
+GitHub Username: [Nawaf-Alosaimi]
+Repository Link:[ https://github.com/[your-username]/OS-Assignment1-[YourName]](https://github.com/Nawaf-Alosaimi/OS-Assignment1-Nawaf-Alosaimi)
+Video Link: https://drive.google.com/file/d/1iksON63D-vG7aAszs9-sLMJGiaMwOtLn/view?usp=drive_link
+Date Submitted: [MAR 30,2026]
 ```
 
 **Example:**
